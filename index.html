@@ -6,13 +6,29 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src= "app.js"></script>
+    <style>
+        table {
+            font-size: x-large;
+            table-layout: fixed;
+            width: 170px;
+            text-align: center;
+            margin: auto;
+            border: solid;
+            cursor: default;
+            padding-left: 5px;
+            padding-right: 5px
+        }
+        #calcScreen {
+            text-align: right; width: 157px; height: 41px; border: none;
+        }
+    </style>
 
     <title>Calculator</title>
 </head>
 
 <body>
 <div id="container" style="width: 100%" ng-controller="calculatorController as ctrl">
-    <table border="1" style="font-size: x-large; table-layout: fixed; width: 170px; text-align: center; margin: auto; border: solid; cursor: default; padding-left: 5px; padding-right: 5px">
+    <table border="1">
         <colgroup>
             <col style="background-color: lightgrey" span="3"/>
             <col style="background-color: orange; font">
@@ -21,7 +37,7 @@
             <td colspan="4" align="right" style="padding-right: 5px; padding-left: 5px;">
                 <input type="text"
                        ng-model="calcScreen"
-                       style="text-align: right; width: 157px; height: 41px; border: none;"/>
+                       id="calcScreen"/>
             </td>
             <!--will overflow at some point. should convert to e-->
         </tr>
